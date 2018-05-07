@@ -8,6 +8,8 @@ $con = new mysqli($host,$user,$password,$db);
 $host="curytravez.postgres.database.azure.com";
 $user="curytravez@curytravez";
 $password="Atahualpacury1993";
-$db="registroDB";
+$dbname="registroDB";
 $con = new mysqli($host,$user,$password,$db);
+$port=5432;
+
 ?>
