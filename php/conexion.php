@@ -20,21 +20,7 @@ $con = new mysqli($host,$user,$password,$db);
  
  //dbname
 // PHP Data Objects(PDO) Sample Code:
-try {
-    $conn = new PDO("sqlsrv:server = tcp:curytravez.database.windows.net,1433; Database = registroDB", "curytravez", "Atahualpacury1993");
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-}
-catch (PDOException $e) {
-    print("Error connecting to SQL Server.");
-    die(print_r($e));
-}
-
-// SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "curytravez@curytravez", "pwd" => "Atahualpacury1993", "Database" => "registroDB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
-$serverName = "tcp:curytravez.database.windows.net,1433";
-$conn = sqlsrv_connect($serverName, $connectionInfo);
-
-
+$con=mysqli_init(); mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "{curytravez.mysql.database.azure.com}", "{curytravez@curytravez}", {Atahualpacury1993}, {registroDB}, 3306);
 
 
 ?>
