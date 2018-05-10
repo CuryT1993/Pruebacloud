@@ -1,10 +1,10 @@
 <?php
-$host="curytravez.mysql.database.azure.com";
+/*$host="curytravez.mysql.database.azure.com";
 $user="curytravez@curytravez";
 $password="Atahualpacury1993";
 $db="registrodb";
 $con = new mysqli($host,$user,$password,$db);
-
+*/
 
 
  // Initialize connection variables.
@@ -22,5 +22,8 @@ $con = new mysqli($host,$user,$password,$db);
 // PHP Data Objects(PDO) Sample Code:
 /*$con=mysqli_init(); mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "{curytravez.mysql.database.azure.com}", "{curytravez@curytravez}", {Atahualpacury1993}, {registrodb}, 3306);
 */
+
+
+$con=mysqli_init(); [mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL);] mysqli_real_connect($con, {curytravez.postgres.database.azure.com}, {curytravez@curytravez}, {Atahualpacury1993}, {registrodb}, {3306});
 
 ?>
