@@ -20,7 +20,7 @@ $con = new mysqli($host,$user,$password,$db);
  
  //dbname
 // PHP Data Objects(PDO) Sample Code:
-$con=mysqli_init(); mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "{curytravez.mysql.database.azure.com}", "{curytravez@curytravez}", {Atahualpacury1993}, {registroDB}, 3306);
+$con=mysqli_init(); mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "{curytravez.mysql.database.azure.com}", "{curytravez@curytravez}", {Atahualpacury1993}, {registrodb}, 3306);
 
 
 ?>
