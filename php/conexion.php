@@ -26,19 +26,18 @@ $con = new mysqli($host,$user,$password,$db);
 
 //$con=mysqli_init(); [mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL);] mysqli_real_connect($con, "curytravez.postgres.database.azure.com","curytravez@curytravez", "Atahualpacury1993", "registrodb", "3306");
 
-$host = 'curytravez.postgres.database.azure.com';
-$username = 'curytravez@curytravez';
-$password = 'Atahualpacury1993';
-$db_name = 'registrodb';
 
-//Establishes the connection
-$conn = mysqli_init();
-mysqli_real_connect($conn, $host, $username, $password, $db_name, 3306);
-if (mysqli_connect_errno($conn)) {
-die('Failed to connect to MySQL: '.mysqli_connect_error());
+define('DBUSER', 'curytravez@curytravez');
+define('DBPASS', 'Atahualpacury1993');
+define('DBSERVER', 'curytravez.postgres.database.azure.com');
+define('DBNAME', 'registrodb');
+
+$conn = new mysqli(DBSERVER, DBUSER, DBPASS, DBNAME);
+
+if (!$conn) {
+    die('error connecting to database');
 }
 
-//Close the connection
-mysqli_close($conn);
-
+echo 'you have created case';
+?>
 ?>
