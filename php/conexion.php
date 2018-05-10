@@ -32,6 +32,14 @@ $con = new mysqli($host,$user,$password,$db);
     // Ejemplo realizado por Oscar Abad Folgueira: http://www.oscarabadfolgueira.com y https://www.dinapyme.com
     
     // Datos de la base de datos
-$con=mysqli_init(); mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "curytravez.postgres.database.azure.com", "curytravez@curytravez","Atahualpacury1993","myapp", 3306);
+class Database
+{
+    public static function Conectar()
+    {
+        $pdo = new PDO('mysql:host=cury.mysql.database.azure.com;dbname=registrodb;charset=utf8', 'servidorcury@cury', 'Atahualpacury1993');
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
+        return $pdo;
+    }
+}
 
 ?>
