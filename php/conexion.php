@@ -19,37 +19,21 @@ $con = new mysqli($host,$user,$password,$db);
 
  
  //dbname
- private $dbname = "registroDB";
- //host
- private $host = "curytravez.postgres.database.azure.com";
- //user database
- private $user = "curytravez@curytravez";
- //password user
- private $pass = 'Atahualpacury1993';
- //port
- private $port = 5432;
-    //instance
- private $dbh;
- 
- //connect with postgresql and pdo
- public function __construct()
- {
-     try {
-         $this->dbh = parent::__construct("pgsql:host=$this->host;port=$this->port;dbname=$this->dbname;user=$this->user;password=$this->pass");
-     }
-        catch(PDOException $e)
-        {
-         echo  $e->getMessage();
-     }
- 
- }
- 
- //función para cerrar una conexión pdo
- public function close()
- {
-    	$this->dbh = null;
- }
- 
+// PHP Data Objects(PDO) Sample Code:
+try {
+    $conn = new PDO("sqlsrv:server = tcp:curytravez.database.windows.net,1433; Database = registroDB", "curytravez", "Atahualpacury1993");
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}
+catch (PDOException $e) {
+    print("Error connecting to SQL Server.");
+    die(print_r($e));
+}
+
+// SQL Server Extension Sample Code:
+$connectionInfo = array("UID" => "curytravez@curytravez", "pwd" => "Atahualpacury1993", "Database" => "registroDB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$serverName = "tcp:curytravez.database.windows.net,1433";
+$conn = sqlsrv_connect($serverName, $connectionInfo);
+
 
 
 
