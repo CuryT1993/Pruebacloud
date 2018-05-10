@@ -21,7 +21,7 @@ $con = new mysqli($host,$user,$password,$db);
  //dbname
 // PHP Data Objects(PDO) Sample Code:
 try {
-    $conn = new PDO("sqlsrv:server = tcp:curytravez.database.windows.net,1433; Database = registroDB", "curytravez", "Atahualpacury1993");
+    $conn = new PDO("sqlsrv:server = tcp:curytravez.database.windows.net,1433; Database = registroDB", "curytravez", "{Atahualpacury1993}");
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 }
 catch (PDOException $e) {
@@ -30,7 +30,7 @@ catch (PDOException $e) {
 }
 
 // SQL Server Extension Sample Code:
-$connectionInfo = array("UID" => "curytravez@curytravez", "pwd" => "Atahualpacury1993", "Database" => "registroDB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
+$connectionInfo = array("UID" => "curytravez@curytravez", "pwd" => "{Atahualpacury1993}", "Database" => "registroDB", "LoginTimeout" => 30, "Encrypt" => 1, "TrustServerCertificate" => 0);
 $serverName = "tcp:curytravez.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 
