@@ -39,5 +39,5 @@ if (!$conn) {
 }
 
 echo 'you have created case';
-?>
+
 ?>
