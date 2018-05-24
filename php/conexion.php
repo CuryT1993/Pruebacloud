@@ -1,10 +1,10 @@
 <?php
-/*$host="curytravez.mysql.database.azure.com";
-$user="curytravez@curytravez";
+$host="curyservidor.mysql.database.azure.com";
+$user="curytravez@curyservidor";
 $password="Atahualpacury1993";
-$db="registrodb";
+$db="myapp";
 $con = new mysqli($host,$user,$password,$db);
-*/
+
 
 
  // Initialize connection variables.
@@ -17,7 +17,7 @@ $con = new mysqli($host,$user,$password,$db);
 //self::$conexion = new PDO("pgsql:host=curytravez.postgres.database.azure.com" . self::$dbHost . ";port=5432;dbname=registroDB" . self::$dbName . ";user=curytravez@curytravez" . self::$dbUsername . ";password=Atahualpacury1993" . self::$dbUserPassword . ";sslmode=require");
 
 
-class Database
+/*class Database
 {
     public static function Conectar()
     {
@@ -25,6 +25,6 @@ class Database
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);  
         return $pdo;
     }
-}
+}*/
 
 ?>
