@@ -17,29 +17,10 @@ $con = new mysqli($host,$user,$password,$db);
 //self::$conexion = new PDO("pgsql:host=curytravez.postgres.database.azure.com" . self::$dbHost . ";port=5432;dbname=registroDB" . self::$dbName . ";user=curytravez@curytravez" . self::$dbUsername . ";password=Atahualpacury1993" . self::$dbUserPassword . ";sslmode=require");
 
 
- 
- //dbname
-// PHP Data Objects(PDO) Sample Code:
-/*$con=mysqli_init(); mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL); mysqli_real_connect($con, "{curytravez.mysql.database.azure.com}", "{curytravez@curytravez}", {Atahualpacury1993}, {registrodb}, 3306);
-*/
 
-
-//$con=mysqli_init(); [mysqli_ssl_set($con, NULL, NULL, {ca-cert filename}, NULL, NULL);] mysqli_real_connect($con, "curytravez.postgres.database.azure.com","curytravez@curytravez", "Atahualpacury1993", "registrodb", "3306");
-
-
-    // Ejemplo de conexión a base de datos MySQL con PHP.
-    //
-    // Ejemplo realizado por Oscar Abad Folgueira: http://www.oscarabadfolgueira.com y https://www.dinapyme.com
-    
-    // Datos de la base de datos
-class Database
-{
-    public static function Conectar()
-    {
-        $pdo = new PDO('mysql:host=cury.mysql.database.azure.com;dbname=registrodb;charset=utf8', 'servidorcury@cury', 'Atahualpacury1993');
+        $pdo = new PDO('mysql:host=curyservidor.mysql.database.azure.com;dbname=registrodb;charset=utf8', 'curytravez@curyservidor', 'Atahualpacury1993');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
         return $pdo;
-    }
-}
+
 
 ?>
