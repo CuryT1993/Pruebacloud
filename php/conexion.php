@@ -18,7 +18,7 @@ $con = new mysqli($host,$user,$password,$db);
 
 
 
-        $pdo = new PDO('mysql:host=curyservidor.mysql.database.azure.com;dbname=registrodb;charset=utf8', 'curytravez@curyservidor', 'Atahualpacury1993');
+        $pdo = new PDO('mysql:host=curyservidor.mysql.database.azure.com;dbname=myapp;charset=utf8', 'curytravez@curyservidor', 'Atahualpacury1993');
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);	
         return $pdo;
 
